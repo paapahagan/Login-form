@@ -30,7 +30,8 @@ function LoginContainer() {
 
   const updatePassword = (e) => setPassword(e.target.value);
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     axios
       .post(
         "https://jckwv5tur8.execute-api.eu-west-1.amazonaws.com/auth/login",

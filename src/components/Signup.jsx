@@ -1,7 +1,6 @@
 import React from "react";
 
 function Signup(props) {
-  console.log(props);
   return (
     <div>
       <h2>Sign Up</h2>

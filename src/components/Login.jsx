@@ -5,9 +5,8 @@ import React from "react";
 // else do nothing
 
 function Login(props) {
-  console.log(props);
   return (
-    <div>
+    <form onSubmit={props.handleLogin}>
       <h2>Login Page</h2>
       <div>
         <label>Email :</label>
@@ -16,6 +15,7 @@ function Login(props) {
           type="email"
           value={props.email}
           onChange={props.updateEmail}
+          required
         />
       </div>
       <br />
@@ -26,14 +26,17 @@ function Login(props) {
           type="password"
           value={props.password}
           onChange={props.updatePassword}
+          onSubmit={props.handleLogin}
+          required
         />
       </div>
       <p></p>
       <br />
-      <button onClick={props.handleLogin}>Login</button>
+      <button type="submit">Login</button>
+
       <p>Don't have an account ? </p>
       <button onClick={props.handleSignup}>Sign Up</button>
-    </div>
+    </form>
   );
 }
 
