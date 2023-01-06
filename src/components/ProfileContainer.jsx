@@ -9,6 +9,10 @@ function ProfileContainer() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
 
+  const handleChurches = () => {
+    navigate("/Church");
+  };
+
   const navigate = useNavigate();
   const handleLogout = () => {
     const token = localStorage.removeItem("token");
@@ -44,7 +48,14 @@ function ProfileContainer() {
         console.log(error);
       });
   };
-  return <Profile name={name} email={email} handleLogout={handleLogout} />;
+  return (
+    <Profile
+      name={name}
+      email={email}
+      handleLogout={handleLogout}
+      handleChurches={handleChurches}
+    />
+  );
 }
 
 export default ProfileContainer;

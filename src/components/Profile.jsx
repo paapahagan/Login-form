@@ -10,6 +10,8 @@ function Profile(props) {
       <br />
       email: {props.email}
       <br />
+      <br />
+      <button onClick={props.handleChurches}> Churches </button>
       <button onClick={props.handleLogout}>log Out</button>
     </div>
   );
